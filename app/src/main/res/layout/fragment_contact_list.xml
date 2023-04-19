@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactListFragment">
+    <LinearLayout
+        android:id="@+id/topHeading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/name"
+            android:layout_gravity=""
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Name"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:layout_weight="1"
+            android:text="Number"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/topHeading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/baseline_add_24"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>
